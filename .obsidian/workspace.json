@@ -11,14 +11,11 @@
             "id": "eefc53d49edaa203",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "MainMap.canvas",
-                "viewState": {
-                  "x": 568.3317473398338,
-                  "y": -775.5650978986282,
-                  "zoom": -0.9694631820083695
-                }
+                "file": "README.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -88,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MainMap.canvas",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MainMap.canvas",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MainMap.canvas"
+                "file": "README.md"
               }
             }
           }
@@ -151,6 +148,7 @@
   },
   "active": "eefc53d49edaa203",
   "lastOpenFiles": [
+    "MainMap.canvas",
     "README.md"
   ]
 }
