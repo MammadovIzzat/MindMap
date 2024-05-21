@@ -1,0 +1,21 @@
+{
+	"nodes":[
+		{"id":"be46450db2cae69a","type":"text","text":"# Mind map of Local enumeration","x":-212,"y":-184,"width":392,"height":104,"color":"1"},
+		{"id":"e52f0d2795d28cb6","type":"text","text":"## Enumerate current user information","x":420,"y":-458,"width":480,"height":78},
+		{"id":"01fab04a893dad59","type":"text","text":"## Plain Text Enumeration","x":436,"y":110,"width":344,"height":50},
+		{"id":"5976577cb58e23b8","type":"text","text":"```\nC:\\Users\\duser>whoami /priv                                                                                                                                                                                                                     PRIVILEGES INFORMATION                                                                                                  ----------------------                                                                                                                                                                                                                          Privilege Name                Description                         State                                                 ============================= =================================== ========                                              SeMachineAccountPrivilege     Add workstations to domain          Disabled                                              SeSystemtimePrivilege         Change the system time              Disabled                                              SeBackupPrivilege             Back up files and directories       Disabled                                              SeRestorePrivilege            Restore files and directories       Disabled                                              SeShutdownPrivilege           Shut down the system                Disabled                                              SeChangeNotifyPrivilege       Bypass traverse checking            Enabled                                               SeRemoteShutdownPrivilege     Force shutdown from a remote system Disabled                                              SeIncreaseWorkingSetPrivilege Increase a process working set      Disabled                                              SeTimeZonePrivilege           Change the time zone                Disabled \n```","x":2140,"y":-1520,"width":1097,"height":417},
+		{"id":"1501f112cd6cf70a","type":"text","text":"### Basic user","x":1320,"y":-211,"width":172,"height":54},
+		{"id":"0fa1c224d7cca2a6","type":"text","text":"### Administratior Permissions","x":1231,"y":-960,"width":350,"height":66},
+		{"id":"cc04bc8b82d49831","type":"text","text":"# PrivEsc","x":-606,"y":935,"width":226,"height":65},
+		{"id":"7cbcd8d7c655e4a0","type":"text","text":"1. ajkvbja","x":-20,"y":513,"width":250,"height":60},
+		{"id":"5e4853e16f6e2c51","type":"text","text":"2. vuhnj","x":-20,"y":640,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"c9962b89c3571260","fromNode":"be46450db2cae69a","fromSide":"right","toNode":"e52f0d2795d28cb6","toSide":"left"},
+		{"id":"6ac3a7ea34b82476","fromNode":"be46450db2cae69a","fromSide":"right","toNode":"01fab04a893dad59","toSide":"left"},
+		{"id":"e5ffd996487a7ab8","fromNode":"e52f0d2795d28cb6","fromSide":"right","toNode":"0fa1c224d7cca2a6","toSide":"left"},
+		{"id":"0e3be4cc5d06c8e0","fromNode":"e52f0d2795d28cb6","fromSide":"right","toNode":"1501f112cd6cf70a","toSide":"left"},
+		{"id":"4fbd4e9740b99ccf","fromNode":"cc04bc8b82d49831","fromSide":"right","toNode":"7cbcd8d7c655e4a0","toSide":"left"},
+		{"id":"0a493f220d16f0a5","fromNode":"cc04bc8b82d49831","fromSide":"right","toNode":"5e4853e16f6e2c51","toSide":"left"}
+	]
+}
