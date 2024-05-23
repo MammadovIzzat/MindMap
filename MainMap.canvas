@@ -2,18 +2,19 @@
 	"nodes":[
 		{"id":"5976577cb58e23b8","type":"text","text":"```\nC:\\Users\\duser>whoami /priv                                                                                                                                                                                                                     PRIVILEGES INFORMATION                                                                                                  ----------------------                                                                                                                                                                                                                          Privilege Name                Description                         State                                                 ============================= =================================== ========                                              SeMachineAccountPrivilege     Add workstations to domain          Disabled                                              SeSystemtimePrivilege         Change the system time              Disabled                                              SeBackupPrivilege             Back up files and directories       Disabled                                              SeRestorePrivilege            Restore files and directories       Disabled                                              SeShutdownPrivilege           Shut down the system                Disabled                                              SeChangeNotifyPrivilege       Bypass traverse checking            Enabled                                               SeRemoteShutdownPrivilege     Force shutdown from a remote system Disabled                                              SeIncreaseWorkingSetPrivilege Increase a process working set      Disabled                                              SeTimeZonePrivilege           Change the time zone                Disabled \n```","x":2640,"y":-1960,"width":1097,"height":417},
 		{"id":"be46450db2cae69a","type":"text","text":"# Mind map of Local enumeration","x":-1573,"y":-344,"width":392,"height":104,"color":"1"},
-		{"id":"179094e6ba2d2b2c","x":-1014,"y":-434,"width":522,"height":285,"type":"text","text":"## Check system on domain or workgroup\n\n``` powershell\n\n(Get-WmiObject Win32_ComputerSystem).PartOfDomain\n(Get-WmiObject Win32_ComputerSystem).Domain\n\n```\n\n``` CMD\nwmic computersystem get domain,partofdomain\n```"},
-		{"id":"0293d6c1b4598b68","x":-220,"y":180,"width":250,"height":60,"type":"text","text":"## Workgroup"},
+		{"id":"179094e6ba2d2b2c","type":"text","text":"## Check system on domain or workgroup\n\n``` powershell\n\n(Get-WmiObject Win32_ComputerSystem).PartOfDomain\n(Get-WmiObject Win32_ComputerSystem).Domain\n\n```\n\n``` CMD\nwmic computersystem get domain,partofdomain\n```","x":-1014,"y":-434,"width":522,"height":285},
+		{"id":"0293d6c1b4598b68","type":"text","text":"## Workgroup","x":-220,"y":180,"width":250,"height":60},
 		{"id":"e52f0d2795d28cb6","type":"text","text":"## Enumerate current user information","x":265,"y":640,"width":480,"height":78},
 		{"id":"0fa1c224d7cca2a6","type":"text","text":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","x":1000,"y":649,"width":350,"height":60},
-		{"id":"c5163b6b6363c2cc","x":-220,"y":-1060,"width":250,"height":60,"type":"text","text":"## Domain"},
+		{"id":"c5163b6b6363c2cc","type":"text","text":"## Domain","x":-220,"y":-1060,"width":250,"height":60},
 		{"id":"7cbcd8d7c655e4a0","type":"text","text":"1. ajkvbja","x":-973,"y":2160,"width":250,"height":60},
 		{"id":"5e4853e16f6e2c51","type":"text","text":"2. vuhnj","x":-973,"y":2287,"width":250,"height":60},
 		{"id":"cc04bc8b82d49831","type":"text","text":"# PrivEsc","x":-1573,"y":2404,"width":392,"height":104,"color":"1"},
 		{"id":"01fab04a893dad59","type":"text","text":"## Plain Text Enumeration","x":265,"y":480,"width":480,"height":72},
-		{"id":"d6e64fa63a72c81c","x":265,"y":320,"width":480,"height":69,"type":"text","text":"## Network Enumeration"},
-		{"id":"21ee6403bcef705c","x":268,"y":174,"width":477,"height":72,"type":"text","text":"## Service Enumeration"},
-		{"id":"600906e6cbe095c9","x":264,"y":0,"width":481,"height":84,"type":"text","text":"## Scheduler Enumeration"}
+		{"id":"d6e64fa63a72c81c","type":"text","text":"## Network Enumeration","x":265,"y":320,"width":480,"height":69},
+		{"id":"21ee6403bcef705c","type":"text","text":"## Service Enumeration","x":268,"y":174,"width":477,"height":72},
+		{"id":"600906e6cbe095c9","type":"text","text":"## Scheduler Enumeration","x":264,"y":0,"width":481,"height":84},
+		{"id":"cf583c4a27b0e639","x":318,"y":-1468,"width":250,"height":60,"type":"text","text":"salam"}
 	],
 	"edges":[
 		{"id":"4fbd4e9740b99ccf","fromNode":"cc04bc8b82d49831","fromSide":"right","toNode":"7cbcd8d7c655e4a0","toSide":"left"},
@@ -25,6 +26,7 @@
 		{"id":"bab74485977c0911","fromNode":"0293d6c1b4598b68","fromSide":"right","toNode":"d6e64fa63a72c81c","toSide":"left"},
 		{"id":"917e6e7949b0f481","fromNode":"0293d6c1b4598b68","fromSide":"right","toNode":"01fab04a893dad59","toSide":"left"},
 		{"id":"42109045655acd1e","fromNode":"0293d6c1b4598b68","fromSide":"right","toNode":"21ee6403bcef705c","toSide":"left"},
-		{"id":"45a63d56fe5e62ee","fromNode":"0293d6c1b4598b68","fromSide":"right","toNode":"600906e6cbe095c9","toSide":"left"}
+		{"id":"45a63d56fe5e62ee","fromNode":"0293d6c1b4598b68","fromSide":"right","toNode":"600906e6cbe095c9","toSide":"left"},
+		{"id":"83f79bad48c827d9","fromNode":"c5163b6b6363c2cc","fromSide":"right","toNode":"cf583c4a27b0e639","toSide":"left"}
 	]
 }

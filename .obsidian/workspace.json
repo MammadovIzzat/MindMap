@@ -15,9 +15,9 @@
               "state": {
                 "file": "MainMap.canvas",
                 "viewState": {
-                  "x": 335.99957018428915,
-                  "y": -76.80280896457137,
-                  "zoom": -1.636129848675036
+                  "x": 147.43972728921636,
+                  "y": -670.9328983348972,
+                  "zoom": -0.6361298486750362
                 }
               }
             }
@@ -141,12 +141,12 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "switcher:Hızlı geçişi aç": false,
+      "graph:Grafik görünümünü aç": false,
+      "canvas:Yeni tuval oluşturun": false,
+      "daily-notes:Bugünün Notunu Aç": false,
+      "templates:Şablon ekle": false,
+      "command-palette:Komut paletini aç": false
     }
   },
   "active": "eefc53d49edaa203",
