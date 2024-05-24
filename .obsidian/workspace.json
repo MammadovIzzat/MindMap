@@ -15,9 +15,9 @@
               "state": {
                 "file": "MainMap.canvas",
                 "viewState": {
-                  "x": 2288.915336074135,
-                  "y": -57.211345079957255,
-                  "zoom": -1
+                  "x": 2780.058009445602,
+                  "y": 3127.727725848181,
+                  "zoom": -0.6666666666666667
                 }
               }
             }
@@ -72,7 +72,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "545dbc7377195ef8",
@@ -88,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Network enumeration (DRAFT).md",
+                "file": "MainMap.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Network enumeration (DRAFT).md",
+                "file": "MainMap.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Network enumeration (DRAFT).md"
+                "file": "MainMap.canvas"
               }
             }
           }
@@ -149,47 +150,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "floating": {
-    "id": "7b05d921d0ae73e4",
-    "type": "floating",
-    "children": [
-      {
-        "id": "42d1cdcf3827f074",
-        "type": "window",
-        "children": [
-          {
-            "id": "c61214b6e37ddf5f",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "2b3efffd76d6c12a",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Network enumeration (DRAFT).md",
-                    "mode": "source",
-                    "source": false
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 0,
-        "y": 0,
-        "width": 1280,
-        "height": 1392,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "2b3efffd76d6c12a",
+  "active": "eefc53d49edaa203",
   "lastOpenFiles": [
-    "MainMap.canvas",
     "Network enumeration (DRAFT).md",
+    "MainMap.canvas",
     "README.md",
     "Pasted image 20240523160216.png",
     "Pasted image 20240523160218.png",

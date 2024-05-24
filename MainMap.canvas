@@ -25,7 +25,16 @@
 		{"id":"217ecc05f30e5b00","x":2776,"y":699,"width":504,"height":894,"color":"2","type":"text","text":"1. **Get-ADObject -LDAPFilter \"(objectClass=computer)\"**: Retrieves all computer objects.\n\n3. **Get-ADObject -LDAPFilter \"(objectClass=group)\"**: Retrieves all group objects.\n\n1. **Get-ADObject -LDAPFilter \"(objectClass=user)\"**: Retrieves all user objects.\n\n1. **Get-ADObject -LDAPFilter \"(objectClass=organizationalUnit)\"**: Retrieves all organizational unit objects.\n\n1. **Get-ADReplicationPartnerMetadata -Target \"<DomainController>\"**: Retrieves replication partner metadata for a specific domain controller.\n\n1. **Get-ADReplicationFailure -Scope \"<Domain>\"**: Retrieves replication failures for a specific domain.\n\n1. **Get-ADReplicationUpToDatenessVectorTable -Server \"<DomainController>\"**: Retrieves replication up-to-dateness vector table for a specific domain controller.\n\n1. **Get-ADFineGrainedPasswordPolicy**: Retrieves fine-grained password policies in the domain."},
 		{"id":"2bdf78644fea9be6","x":2782,"y":648,"width":250,"height":60,"type":"text","text":"Commands which are starts with Get-AD"},
 		{"id":"0b4813f5207d3b7b","x":2557,"y":-359,"width":350,"height":79,"color":"#cca000","type":"text","text":"## Enumeration Tools \n"},
-		{"id":"f460780935cbe10f","x":3125,"y":-363,"width":355,"height":184,"color":"3","type":"text","text":"# 1.AD RECON\n# 2.Ping Castle\n\n# 3.SharpHound"}
+		{"id":"f460780935cbe10f","x":3125,"y":-363,"width":355,"height":184,"color":"3","type":"text","text":"# 1.AD RECON\n# 2.Ping Castle\n\n# 3.SharpHound"},
+		{"id":"1dd78f6e44eeae96","x":2160,"y":2030,"width":480,"height":130,"color":"#19a343","type":"text","text":"## NTLM Enumeration + Kerberos Enumeration "},
+		{"id":"1d058d652460cf75","x":2912,"y":258,"width":391,"height":62,"color":"3","type":"text","text":"## GET-DnsClientCache"},
+		{"id":"fb5069028f03d85e","x":1637,"y":2640,"width":323,"height":200,"color":"2","type":"text","text":"# Klist - to list all cached Kerberos tickets on a Windows\n"},
+		{"id":"97823b2d8a04bf1e","x":1637,"y":3044,"width":523,"height":316,"type":"text","text":"## Command : Get-ADUser -Filter * -Properties msDS-AllowedToDelegateTo | Where-Object {$_.msDS-AllowedToDelegateTo -ne $null}\n\n## Description : \nUsing PowerShell, you can enumerate accounts with Kerberos constrained delegation rights, potentially revealing privileged accounts."},
+		{"id":"5ec8beff17788001","x":2560,"y":3044,"width":440,"height":316,"type":"text","text":"## Command : Get-WinEvent -FilterHashtable @{LogName='Security'; ID=4769}\n\n## Description :\nMonitor event logs for Kerberos TGS requests, which can provide insights into service principal names (SPNs) and authentication activities."},
+		{"id":"1a54495e363b66ef","x":2837,"y":2640,"width":363,"height":200,"type":"text","text":"## Command : \nsetspn -Q  */*\n\nDescription : \nEnumerate SPNs registered in Active Directory, revealing services that may be using Kerberos authentication.\n\n"},
+		{"id":"c871a8abe79898e4","x":2200,"y":3820,"width":360,"height":240,"color":"#740606","type":"text","text":"Get-ADUser -Identity <Username> -Properties KerberosTicketFlags | Select-Object KerberosTicketFlags\n\nDescription : \nAnalyze Kerberos ticket lifetimes to ensure they align with security policies and detect anomalies."},
+		{"id":"9ea96d39ea36187e","x":2160,"y":2668,"width":480,"height":192,"color":"1","type":"text","text":"## Get-ADUser -Filter * -Properties DoesNotRequirePreAuth | Where-Object {$_.DoesNotRequirePreAuth -eq $true}\n\n## Description : \nIdentify accounts where Kerberos pre-authentication is disabled, as these may be susceptible to brute-force attacks."},
+		{"id":"738c6e6529cc8033","x":3102,"y":2243,"width":250,"height":60,"color":"3","type":"text","text":"## IMPORTANT "}
 	],
 	"edges":[
 		{"id":"4fbd4e9740b99ccf","fromNode":"cc04bc8b82d49831","fromSide":"right","toNode":"7cbcd8d7c655e4a0","toSide":"left"},
@@ -51,6 +60,19 @@
 		{"id":"a1608a88852fa7d6","fromNode":"8e63bd852057be87","fromSide":"right","toNode":"0b4813f5207d3b7b","toSide":"left"},
 		{"id":"eae51392348fe5e6","fromNode":"fe57a681552dbd84","fromSide":"top","toNode":"0b4813f5207d3b7b","toSide":"bottom"},
 		{"id":"0c643092e9d300a6","fromNode":"0b4813f5207d3b7b","fromSide":"top","toNode":"f460780935cbe10f","toSide":"bottom"},
-		{"id":"aa00922314d7565d","fromNode":"0b4813f5207d3b7b","fromSide":"top","toNode":"f460780935cbe10f","toSide":"right"}
+		{"id":"aa00922314d7565d","fromNode":"0b4813f5207d3b7b","fromSide":"top","toNode":"f460780935cbe10f","toSide":"right"},
+		{"id":"0f413db62b2fbd61","fromNode":"fe57a681552dbd84","fromSide":"bottom","toNode":"1dd78f6e44eeae96","toSide":"top"},
+		{"id":"3883ea14d1c5170a","fromNode":"fe57a681552dbd84","fromSide":"top","toNode":"1d058d652460cf75","toSide":"bottom"},
+		{"id":"5adc183a3ab94ad5","fromNode":"1dd78f6e44eeae96","fromSide":"left","toNode":"fb5069028f03d85e","toSide":"right"},
+		{"id":"6f023dd2b6df74b9","fromNode":"1dd78f6e44eeae96","fromSide":"bottom","toNode":"97823b2d8a04bf1e","toSide":"top"},
+		{"id":"928581ddf12b405f","fromNode":"1dd78f6e44eeae96","fromSide":"bottom","toNode":"5ec8beff17788001","toSide":"top"},
+		{"id":"75c9c8bc4c474c08","fromNode":"1dd78f6e44eeae96","fromSide":"right","toNode":"1a54495e363b66ef","toSide":"left"},
+		{"id":"df040ded31d0c159","fromNode":"1dd78f6e44eeae96","fromSide":"bottom","toNode":"c871a8abe79898e4","toSide":"top"},
+		{"id":"964881e30ce7e4db","fromNode":"1dd78f6e44eeae96","fromSide":"bottom","toNode":"9ea96d39ea36187e","toSide":"top"},
+		{"id":"36af391fbef9aa21","fromNode":"fb5069028f03d85e","fromSide":"right","toNode":"9ea96d39ea36187e","toSide":"left"},
+		{"id":"a1ac2586756aabe7","fromNode":"97823b2d8a04bf1e","fromSide":"top","toNode":"9ea96d39ea36187e","toSide":"left"},
+		{"id":"428f58ef06eb944b","fromNode":"5ec8beff17788001","fromSide":"top","toNode":"9ea96d39ea36187e","toSide":"right"},
+		{"id":"28616bd01377bc74","fromNode":"1a54495e363b66ef","fromSide":"left","toNode":"9ea96d39ea36187e","toSide":"right"},
+		{"id":"8c44ced422f332f9","fromNode":"9ea96d39ea36187e","fromSide":"right","toNode":"738c6e6529cc8033","toSide":"left"}
 	]
 }
