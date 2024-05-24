@@ -15,8 +15,8 @@
               "state": {
                 "file": "MainMap.canvas",
                 "viewState": {
-                  "x": 1690.098080228226,
-                  "y": 1306.964253844817,
+                  "x": 2312.956131110734,
+                  "y": 2952.18673193003,
                   "zoom": -1.666666666666666
                 }
               }
@@ -153,10 +153,10 @@
   "lastOpenFiles": [
     "README.md",
     "MainMap.canvas",
+    "Untitled.md",
     "Pasted image 20240523160232.png",
     "Pasted image 20240523160218.png",
     "Pasted image 20240523160216.png",
-    "Network enumeration (DRAFT).md",
-    "Untitled.md"
+    "Network enumeration (DRAFT).md"
   ]
 }
