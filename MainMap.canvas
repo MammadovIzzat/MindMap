@@ -34,7 +34,9 @@
 		{"id":"1a54495e363b66ef","x":2837,"y":2640,"width":363,"height":200,"type":"text","text":"## Command : \nsetspn -Q  */*\n\nDescription : \nEnumerate SPNs registered in Active Directory, revealing services that may be using Kerberos authentication.\n\n"},
 		{"id":"c871a8abe79898e4","x":2200,"y":3820,"width":360,"height":240,"color":"#740606","type":"text","text":"Get-ADUser -Identity <Username> -Properties KerberosTicketFlags | Select-Object KerberosTicketFlags\n\nDescription : \nAnalyze Kerberos ticket lifetimes to ensure they align with security policies and detect anomalies."},
 		{"id":"9ea96d39ea36187e","x":2160,"y":2668,"width":480,"height":192,"color":"1","type":"text","text":"## Get-ADUser -Filter * -Properties DoesNotRequirePreAuth | Where-Object {$_.DoesNotRequirePreAuth -eq $true}\n\n## Description : \nIdentify accounts where Kerberos pre-authentication is disabled, as these may be susceptible to brute-force attacks."},
-		{"id":"738c6e6529cc8033","x":3102,"y":2243,"width":250,"height":60,"color":"3","type":"text","text":"## IMPORTANT "}
+		{"id":"738c6e6529cc8033","x":3102,"y":2243,"width":250,"height":60,"color":"3","type":"text","text":"## IMPORTANT "},
+		{"id":"d7b81d8c043a0da3","x":2809,"y":3789,"width":371,"height":91,"color":"4","type":"text","text":"## gpresult /SCOPE COMPUTER /Z\n"},
+		{"id":"074a6890a7e61a57","x":1680,"y":3744,"width":377,"height":91,"color":"#034b77","type":"text","text":"nessuscli scan --template \"NTLM Vulnerability Scan\" --hosts <target>\n\n(Vulnerability Scanning)"}
 	],
 	"edges":[
 		{"id":"4fbd4e9740b99ccf","fromNode":"cc04bc8b82d49831","fromSide":"right","toNode":"7cbcd8d7c655e4a0","toSide":"left"},
@@ -73,6 +75,8 @@
 		{"id":"a1ac2586756aabe7","fromNode":"97823b2d8a04bf1e","fromSide":"top","toNode":"9ea96d39ea36187e","toSide":"left"},
 		{"id":"428f58ef06eb944b","fromNode":"5ec8beff17788001","fromSide":"top","toNode":"9ea96d39ea36187e","toSide":"right"},
 		{"id":"28616bd01377bc74","fromNode":"1a54495e363b66ef","fromSide":"left","toNode":"9ea96d39ea36187e","toSide":"right"},
-		{"id":"8c44ced422f332f9","fromNode":"9ea96d39ea36187e","fromSide":"right","toNode":"738c6e6529cc8033","toSide":"left"}
+		{"id":"8c44ced422f332f9","fromNode":"9ea96d39ea36187e","fromSide":"right","toNode":"738c6e6529cc8033","toSide":"left"},
+		{"id":"a2a393878b50a13e","fromNode":"9ea96d39ea36187e","fromSide":"bottom","toNode":"d7b81d8c043a0da3","toSide":"top"},
+		{"id":"192a4bd5d82de7d8","fromNode":"9ea96d39ea36187e","fromSide":"bottom","toNode":"074a6890a7e61a57","toSide":"top"}
 	]
 }
