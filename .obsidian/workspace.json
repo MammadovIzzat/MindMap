@@ -15,9 +15,9 @@
               "state": {
                 "file": "MainMap.canvas",
                 "viewState": {
-                  "x": 50.195728711344415,
-                  "y": -117.30050854563339,
-                  "zoom": -1.6361298486750357
+                  "x": 2288.915336074135,
+                  "y": -57.211345079957255,
+                  "zoom": -1
                 }
               }
             }
@@ -88,7 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MainMap.canvas",
+                "file": "Network enumeration (DRAFT).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MainMap.canvas",
+                "file": "Network enumeration (DRAFT).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MainMap.canvas"
+                "file": "Network enumeration (DRAFT).md"
               }
             }
           }
@@ -149,9 +149,50 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "eefc53d49edaa203",
+  "floating": {
+    "id": "7b05d921d0ae73e4",
+    "type": "floating",
+    "children": [
+      {
+        "id": "42d1cdcf3827f074",
+        "type": "window",
+        "children": [
+          {
+            "id": "c61214b6e37ddf5f",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "2b3efffd76d6c12a",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Network enumeration (DRAFT).md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 1392,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "2b3efffd76d6c12a",
   "lastOpenFiles": [
+    "MainMap.canvas",
+    "Network enumeration (DRAFT).md",
     "README.md",
-    "MainMap.canvas"
+    "Pasted image 20240523160216.png",
+    "Pasted image 20240523160218.png",
+    "Pasted image 20240523160232.png"
   ]
 }
