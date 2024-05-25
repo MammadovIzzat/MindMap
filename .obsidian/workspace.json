@@ -15,9 +15,9 @@
               "state": {
                 "file": "MainMap.canvas",
                 "viewState": {
-                  "x": 2266.261792411764,
-                  "y": 3535.4875535161655,
-                  "zoom": -1.1102230246251565e-16
+                  "x": 3398.8522432562067,
+                  "y": 1810.0579697961432,
+                  "zoom": -4
                 }
               }
             }
@@ -72,8 +72,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "545dbc7377195ef8",
@@ -152,11 +151,12 @@
   },
   "active": "eefc53d49edaa203",
   "lastOpenFiles": [
-    "Network enumeration (DRAFT).md",
-    "MainMap.canvas",
-    "README.md",
-    "Pasted image 20240523160216.png",
+    "Pasted image 20240523160232.png",
     "Pasted image 20240523160218.png",
-    "Pasted image 20240523160232.png"
+    "Pasted image 20240523160216.png",
+    "Network enumeration (DRAFT).md",
+    "README.md",
+    "MainMap.canvas",
+    "Untitled.md"
   ]
 }
