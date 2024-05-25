@@ -15,9 +15,9 @@
               "state": {
                 "file": "MainMap.canvas",
                 "viewState": {
-                  "x": 7385.6176196472215,
-                  "y": -6604.716732273335,
-                  "zoom": -1.3333333333333328
+                  "x": -1082.31300132804,
+                  "y": 1071.2928474143318,
+                  "zoom": -1
                 }
               }
             }
@@ -72,8 +72,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "545dbc7377195ef8",
@@ -142,17 +141,22 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Hızlı geçişi aç": false,
-      "graph:Grafik görünümünü aç": false,
-      "canvas:Yeni tuval oluşturun": false,
-      "daily-notes:Bugünün Notunu Aç": false,
-      "templates:Şablon ekle": false,
-      "command-palette:Komut paletini aç": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
     }
   },
   "active": "eefc53d49edaa203",
   "lastOpenFiles": [
+    "Pasted image 20240523160232.png",
+    "Pasted image 20240523160218.png",
+    "Pasted image 20240523160216.png",
+    "Network enumeration (DRAFT).md",
     "README.md",
-    "MainMap.canvas"
+    "MainMap.canvas",
+    "Untitled.md"
   ]
 }
