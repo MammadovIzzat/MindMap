@@ -4,20 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "3ea00216e7ca39d1",
+        "id": "4135105b702b13f9",
         "type": "tabs",
         "children": [
           {
-            "id": "eefc53d49edaa203",
+            "id": "d9aaa5b2ff0e01d4",
             "type": "leaf",
             "state": {
               "type": "canvas",
               "state": {
                 "file": "MainMap.canvas",
                 "viewState": {
-                  "x": 3145.724926278129,
-                  "y": 1048.5784382620172,
-                  "zoom": -1.9694631820083692
+                  "x": 4745.120710660753,
+                  "y": 7784.232589509969,
+                  "zoom": -2.251097374333124
                 }
               }
             }
@@ -72,8 +72,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "545dbc7377195ef8",
@@ -150,9 +149,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "eefc53d49edaa203",
+  "active": "d9aaa5b2ff0e01d4",
   "lastOpenFiles": [
-    "README.md",
-    "MainMap.canvas"
+    "MainMap.png",
+    "MainMap.canvas",
+    "Untitled.md",
+    "README.md"
   ]
 }
