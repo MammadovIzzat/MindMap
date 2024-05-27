@@ -15,9 +15,9 @@
               "state": {
                 "file": "MainMap.canvas",
                 "viewState": {
-                  "x": -1082.31300132804,
-                  "y": 1071.2928474143318,
-                  "zoom": -1
+                  "x": 7137.265445291376,
+                  "y": 8078.460623746414,
+                  "zoom": -0.9999999999999996
                 }
               }
             }
@@ -51,7 +51,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "IIS",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -68,7 +68,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -141,12 +142,12 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "switcher:Hızlı geçişi aç": false,
+      "graph:Grafik görünümünü aç": false,
+      "canvas:Yeni tuval oluşturun": false,
+      "daily-notes:Bugünün Notunu Aç": false,
+      "templates:Şablon ekle": false,
+      "command-palette:Komut paletini aç": false
     }
   },
   "active": "eefc53d49edaa203",
