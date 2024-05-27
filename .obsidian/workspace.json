@@ -15,9 +15,9 @@
               "state": {
                 "file": "MainMap.canvas",
                 "viewState": {
-                  "x": 7137.265445291376,
-                  "y": 8078.460623746414,
-                  "zoom": -0.9999999999999996
+                  "x": 11247.354584120372,
+                  "y": 8762.79209363573,
+                  "zoom": -1.9999999999999993
                 }
               }
             }
@@ -51,7 +51,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "IIS",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
