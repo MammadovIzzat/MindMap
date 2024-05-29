@@ -1,96 +1,117 @@
-Commands:
 
-1. **net view**: Displays a list of resources available on the network.
-2. **net user**: Displays user accounts on a domain.
-3. **net group**: Displays group information on a domain.
-4. **net group "Domain Admins" /domain**: Lists members of the Domain Admins group.
-5. **net group "Enterprise Admins" /domain**: Lists members of the Enterprise Admins group.
-6. **net group "Domain Controllers" /domain**: Lists domain controller servers.
-7. **net group "Schema Admins" /domain**: Lists members of the Schema Admins group.
-8. **net group "Exchange Organization Administrators" /domain**: Lists members of Exchange Organization Administrators group.
-9. **net group "Administrators" /domain**: Lists members of the Administrators group.
+- crackmapexec smb 10.129.203.121 -u '' -p '' --users --export $(pwd)/users.txt 
 
-
-1. **nltest /domain_trusts**: Displays domain trust relationships.
-2. **nltest /dclist:<domain>**: Lists domain controllers for a specified domain.
-
-
-1. **dsquery server -domain <domain>**: Lists servers in a domain.
-2. **dsquery user -name * -limit 0**: Lists all user accounts.
-3. **dsquery computer -limit 0**: Lists all computers in the domain.
-4. **dsquery group -name * -limit 0**: Lists all groups.
-5. **dsquery ou -limit 0**: Lists all organizational units (OUs).
-6. **dsquery subnet -limit 0**: Lists all subnets in the domain.
-7. **dsquery site -limit 0**: Lists all sites in the domain.
-8. **dsquery contact -limit 0**: Lists all contacts in the domain.
-9. **dsquery * -filter (objectClass=*) -attr distinguishedName**: Lists all objects in the domain with their distinguished names.
+Check for SMB NULL sessions on a domain controller host and enumerate valid users
 
 
 
 
 
+Network Enumeration scripts. 
+```
+# Import required modules
+Import-Module ActiveDirectory
+
+# Get current domain
+$currentDomain = [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()
+
+# Enumerate domain controllers
+$domainControllers = Get-ADDomainController -Filter *
+
+# Display domain controller information
+foreach ($dc in $domainControllers) {
+    Write-Host "Domain Controller: $($dc.HostName)"
+    Write-Host "  IP Address: $($dc.IPAddress)"
+    Write-Host "  Site: $($dc.Site)"
+    Write-Host "  OS Version: $($dc.OperatingSystem)"
+    Write-Host "  OS Service Pack: $($dc.OperatingSystemServicePack)"
+    Write-Host ""
+}
+
+# Enumerate domain users
+$domainUsers = Get-ADUser -Filter *
+Write-Host "Domain Users:"
+foreach ($user in $domainUsers) {
+    Write-Host "  $($user.SamAccountName) - $($user.Name)"
+}
+
+# Enumerate domain groups
+$domainGroups = Get-ADGroup -Filter *
+Write-Host "Domain Groups:"
+foreach ($group in $domainGroups) {
+    Write-Host "  $($group.Name)"
+}
+
+# Enumerate domain computers
+$domainComputers = Get-ADComputer -Filter *
+Write-Host "Domain Computers:"
+foreach ($computer in $domainComputers) {
+    Write-Host "  $($computer.Name)"
+}
+
+# Get domain password policy
+$domainPolicy = Get-ADDefaultDomainPasswordPolicy
+Write-Host "Domain Password Policy:"
+Write-Host "  MaxPasswordAge: $($domainPolicy.MaxPasswordAge)"
+Write-Host "  MinPasswordLength: $($domainPolicy.MinPasswordLength)"
+Write-Host "  PasswordComplexity: $($domainPolicy.PasswordHistoryCount)"
+
+```
+
+
+Kerberos , NTLM , SMB Enumeration 
+
+```
+Import-Module ActiveDirectory
+
+Write-Host "Kerberos Enumeration:"
+$kerberosInfo = Get-ADUser -Filter * -Properties UserPrincipalName, ServicePrincipalName
+foreach ($user in $kerberosInfo) {
+    if ($user.ServicePrincipalName) {
+        Write-Host "  $($user.Name)"
+        foreach ($spn in $user.ServicePrincipalName) {
+            Write-Host "    $spn"
+        }
+    }
+}
+
+Write-Host "NTLM Enumeration:"
+$ntlmInfo = Get-ADUser -Filter * -Properties UserPrincipalName
+foreach ($user in $ntlmInfo) {
+    Write-Host "  $($user.Name) - $($user.UserPrincipalName)"
+}
+
+Write-Host "SMB Enumeration:"
+$shares = Get-WmiObject -Class Win32_Share
+foreach ($share in $shares) {
+    Write-Host "  $($share.Name) - $($share.Path)"
+}
+
+Write-Host "Domain Controllers Enumeration:"
+$domainControllers = Get-ADDomainController -Filter *
+foreach ($dc in $domainControllers) {
+    Write-Host "  $($dc.HostName)"
+}
+
+Write-Host "Domain Users Enumeration:"
+$domainUsers = Get-ADUser -Filter *
+foreach ($user in $domainUsers) {
+    Write-Host "  $($user.SamAccountName) - $($user.Name)"
+}
+
+Write-Host "Domain Groups Enumeration:"
+$domainGroups = Get-ADGroup -Filter *
+foreach ($group in $domainGroups) {
+    Write-Host "  $($group.Name)"
+}
+
+Write-Host "Domain Computers Enumeration:"
+$domainComputers = Get-ADComputer -Filter *
+foreach ($computer in $domainComputers) {
+    Write-Host "  $($computer.Name)"
+}
 
 
 
 
-
-1. **Get-ADDomain**: Retrieves the properties of the Active Directory domain.
-2. **Get-ADForest**: Retrieves the properties of the Active Directory forest.
-3. **Get-ADDomainController**: Retrieves the properties of domain controllers.
-4. **Get-ADUser -Filter * -Properties * | Select-Object Name, SamAccountName, Description**: Retrieves all user accounts along with their names, SAM account names, and descriptions.
-5. **Get-ADGroup -Filter * -Properties * | Select-Object Name, GroupCategory, Description**: Retrieves all groups along with their names, categories, and descriptions.
-6. **Get-ADComputer -Filter * -Properties * | Select-Object Name, OperatingSystem, OperatingSystemServicePack**: Retrieves all computers along with their names, operating systems, and service packs.
-7. **Get-ADOrganizationalUnit -Filter * -Properties * | Select-Object Name, Description**: Retrieves all organizational units along with their names and descriptions.
-8. **Get-ADDomainController -Filter * | Select-Object Name, Site, IPv4Address**: Retrieves domain controllers along with their names, sites, and IPv4 addresses.
-9. **Get-ADGroupMember "Domain Admins" | Select-Object Name, SamAccountName**: Retrieves members of the Domain Admins group along with their names and SAM account names.
-10. **Get-ADGroupMember "Enterprise Admins" | Select-Object Name, SamAccountName**: Retrieves members of the Enterprise Admins group along with their names and SAM account names.
-11. **Get-ADGroupMember "Schema Admins" | Select-Object Name, SamAccountName**: Retrieves members of the Schema Admins group along with their names and SAM account names.
-
-
-
-13. **Get-ADTrust -Filter * | Select-Object Name, TrustType, TrustDirection, SourceDomain, TargetDomain**: Retrieves trust relationships along with their names, types, directions, source domains, and target domains.
-
-
-1. **Get-ADObject -LDAPFilter "(objectClass=computer)"**: Retrieves all computer objects.
-2. **Get-ADObject -LDAPFilter "(objectClass=group)"**: Retrieves all group objects.
-3. **Get-ADObject -LDAPFilter "(objectClass=user)"**: Retrieves all user objects.
-4. **Get-ADObject -LDAPFilter "(objectClass=organizationalUnit)"**: Retrieves all organizational unit objects.
-5. **Get-ADReplicationPartnerMetadata -Target "<DomainController>"**: Retrieves replication partner metadata for a specific domain controller.
-6. **Get-ADReplicationFailure -Scope "<Domain>"**: Retrieves replication failures for a specific domain.
-7. **Get-ADReplicationUpToDatenessVectorTable -Server "<DomainController>"**: Retrieves replication up-to-dateness vector table for a specific domain controller.
-8. **Get-ADFineGrainedPasswordPolicy**: Retrieves fine-grained password policies in the domain.
-
-Tools:
-
-1. **ADRecon**: A tool for Active Directory reconnaissance and enumeration.
-2. **PingCastle**: A tool for Active Directory security assessment and auditing.
-3. **SharpHound**: A BloodHound ingestor implemented in C# for
-
-
-
-Network enumeration : 
-
-ipconfig /all 
-
-arp -a 
-
-netstat 
-
-route print 
-
-net use 
-
-GET-DnsClientCache
-
-
-1. Start Powershell - **powershell -ep bypass -ep** bypasses the execution policy of powershell allowing you to easily run scripts 
-
-2. Start PowerView - . **.\Downloads\PowerView.ps1**
-
-3. Enumerate the domain users - **Get-NetUser | select cn**
-
-4. Enumerate the domain groups - **Get-NetGroup -GroupName *admin*** 
-
-5 SharedFolder **net share Invoke-ShareFinder****
-**
-6 Enumerate **netdevices Get-NetComputer -fulldata | select operatingsystem**
+```

@@ -11,14 +11,11 @@
             "id": "eefc53d49edaa203",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "MainMap.canvas",
-                "viewState": {
-                  "x": 3398.8522432562067,
-                  "y": 1810.0579697961432,
-                  "zoom": -4
-                }
+                "file": "Network enumeration (DRAFT).md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -88,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MainMap.canvas",
+                "file": "Network enumeration (DRAFT).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MainMap.canvas",
+                "file": "Network enumeration (DRAFT).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MainMap.canvas"
+                "file": "Network enumeration (DRAFT).md"
               }
             }
           }
@@ -151,12 +148,12 @@
   },
   "active": "eefc53d49edaa203",
   "lastOpenFiles": [
+    "README.md",
+    "Network enumeration (DRAFT).md",
+    "MainMap.canvas",
     "Pasted image 20240523160232.png",
     "Pasted image 20240523160218.png",
     "Pasted image 20240523160216.png",
-    "Network enumeration (DRAFT).md",
-    "README.md",
-    "MainMap.canvas",
     "Untitled.md"
   ]
 }
