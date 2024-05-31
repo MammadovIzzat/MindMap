@@ -15,9 +15,9 @@
               "state": {
                 "file": "MainMap.canvas",
                 "viewState": {
-                  "x": 862.1207556256434,
-                  "y": -4016.931348036691,
-                  "zoom": -0.3333333333333334
+                  "x": 2322.3825061710036,
+                  "y": 2707.7226478312496,
+                  "zoom": -2.9999999999999996
                 }
               }
             }
@@ -151,12 +151,17 @@
   },
   "active": "eefc53d49edaa203",
   "lastOpenFiles": [
+    "info4.md",
+    "info3.md",
+    "info2.md",
+    "Info1.md",
+    "MainMap.png",
+    "MainMap.canvas",
     "README.md",
     "Network enumeration (DRAFT).md",
     "Pasted image 20240523160232.png",
     "Pasted image 20240523160218.png",
     "Pasted image 20240523160216.png",
-    "MainMap.canvas",
     "Untitled.md"
   ]
 }
