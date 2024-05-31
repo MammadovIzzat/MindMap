@@ -15,9 +15,9 @@
               "state": {
                 "file": "MainMap.canvas",
                 "viewState": {
-                  "x": 14622.233698447157,
-                  "y": 8285.243155008036,
-                  "zoom": -0.6666666666666663
+                  "x": 2322.3825061710036,
+                  "y": 2707.7226478312496,
+                  "zoom": -2.9999999999999996
                 }
               }
             }
@@ -51,7 +51,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#Defender",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -68,8 +68,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -142,22 +141,27 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Hızlı geçişi aç": false,
-      "graph:Grafik görünümünü aç": false,
-      "canvas:Yeni tuval oluşturun": false,
-      "daily-notes:Bugünün Notunu Aç": false,
-      "templates:Şablon ekle": false,
-      "command-palette:Komut paletini aç": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
     }
   },
   "active": "eefc53d49edaa203",
   "lastOpenFiles": [
+    "info4.md",
+    "info3.md",
+    "info2.md",
+    "Info1.md",
+    "MainMap.png",
+    "MainMap.canvas",
+    "README.md",
+    "Network enumeration (DRAFT).md",
     "Pasted image 20240523160232.png",
     "Pasted image 20240523160218.png",
     "Pasted image 20240523160216.png",
-    "Network enumeration (DRAFT).md",
-    "README.md",
-    "MainMap.canvas",
     "Untitled.md"
   ]
 }
