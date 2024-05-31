@@ -15,9 +15,9 @@
               "state": {
                 "file": "MainMap.canvas",
                 "viewState": {
-                  "x": -1082.31300132804,
-                  "y": 1071.2928474143318,
-                  "zoom": -1
+                  "x": 2322.3825061710036,
+                  "y": 2707.7226478312496,
+                  "zoom": -2.9999999999999996
                 }
               }
             }
@@ -51,7 +51,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#Defender",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -151,12 +151,17 @@
   },
   "active": "eefc53d49edaa203",
   "lastOpenFiles": [
+    "info4.md",
+    "info3.md",
+    "info2.md",
+    "Info1.md",
+    "MainMap.png",
+    "MainMap.canvas",
+    "README.md",
+    "Network enumeration (DRAFT).md",
     "Pasted image 20240523160232.png",
     "Pasted image 20240523160218.png",
     "Pasted image 20240523160216.png",
-    "Network enumeration (DRAFT).md",
-    "README.md",
-    "MainMap.canvas",
     "Untitled.md"
   ]
 }
